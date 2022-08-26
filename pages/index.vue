@@ -21,8 +21,11 @@
       <h3>E-mail</h3>
       <input type="text" v-model="inputEmail"  class="form-control" @input="cekInput()" placeholder="Masukkan Email Anda">
     </div>
-    <div class="col-6 pt-3 mt-4">
+    <div v-if="jenisPrinter == '2'" class="col-6 pt-3 mt-4">
       <button type="button" class="btn btn-primary btn-block rounded-pill">Cek Sekarang !</button>
+    </div>
+    <div v-else class="col-6 pt-3 mt-4">
+      <button type="button" disabled class="btn btn-primary btn-block rounded-pill">Cek Sekarang !</button>
     </div>
   </div>
 </div>
